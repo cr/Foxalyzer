@@ -1,0 +1,22 @@
+[
+  {
+    name: "icon file existence",
+    category: "icon",
+    rule: "open file and verify it is there"
+  },
+  {
+    name: "icon file type",
+    category: "icon",
+    rule: "png or jpeg or svg"
+  },
+  {
+    name: "icon file dimensions",
+    category: "icon",
+    rule: "needs to be square"
+  },
+  {
+    name: "icon file size",
+    category: "icon",
+    rule: "needs to be 2MB or less"
+  }
+]
