@@ -1,0 +1,24 @@
+[
+  {
+    name: "valid json",
+    category: "manifest",
+    rule: "verify it is a valid json object",
+    error_message: "Manifest is not in a valid JSON format"
+  },
+  {
+    name: "unavailable property is not allowed",
+    category: "manifest",
+    rule: "verify non-existent properties are not included",
+    error_message: "Unexpected `property` found in manifest"
+  },
+  {
+    name: "mandatory keys for all manifest files",
+    category: "manifest",
+    rule: "`name`, `description` are mandatory fields"
+  },
+  {
+    name: "mandatory keys for marketplace-specific manifest files",
+    category: "manifest",
+    rule: "`name`, `description`, `developer` are mandatory fields"
+  }
+]
