@@ -2,21 +2,25 @@
   {
     name: "icon file existence",
     category: "icon",
-    rule: "open file and verify it is there"
+    rule: "open file and verify it is there",
+    error_message: "The file does not exist"
   },
   {
     name: "icon file type",
     category: "icon",
-    rule: "png or jpeg or svg"
+    rule: "png or jpeg or svg",
+    error_message: "The file must be either a png, jpeg or svg file"
   },
   {
     name: "icon file dimensions",
     category: "icon",
-    rule: "needs to be square"
+    rule: "needs to be square",
+    error_message: "The icon must be a square"
   },
   {
     name: "icon file size",
     category: "icon",
-    rule: "needs to be 2MB or less"
+    rule: "needs to be 2MB or less",
+    error_message: "The filesize must be 2MB or less"
   }
 ]
