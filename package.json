@@ -1,0 +1,23 @@
+{
+  "name": "Foxalyzer",
+  "description": "A framework for parsers, rule matchers, and report generators",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "jszip": "~2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "should": "~4.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cr/Foxalyzer.git"
+  },
+  "keywords": [
+    "code analysis",
+    "javascript",
+    "static analysis"
+  ],
+  "license": "MPL-2.0"
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "name": "square_app_icons",
+    "description": "Matches every app icon that is not sqare",
+    "category": "appcheck",
+    "matcher": "imageprops>=0.1",
+    "target": "FxOS>=0.9"
+	"rule": {
+      "": "",
+      "description": "Non-square image",
+      "info": "http://www.wikipedia.org/",
+      "property": "ratio_is",
+      "value": "1.0",
+    }
+  },
+  {
+  }
+]
+
