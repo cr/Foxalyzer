@@ -59,5 +59,12 @@
       "must match one of the keys in `locales`"
     ],
     error_message: "`default_locale` must match one of the keys in `locales`"
+  },
+  {
+    name: "name is valid",
+    category: "manifest",
+    rules: [
+      "common.json rules"
+    ]
   }
 ]
