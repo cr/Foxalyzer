@@ -67,5 +67,21 @@
       "common.json rules"
     ],
     warning_message: "Your app's name is longer than 12 characters and may be truncated on Firefox OS devices. Consider using a shorter name for your app"
+  },
+  {
+    name: "developer is valid",
+    category: "manifest",
+    rules: [
+      "common.json rules",
+      "developer URL must be an absolute http or https URL"
+    ],
+    error_message: "Developer URL must be an absolute HTTP or HTTPS URL"
+  },
+  {
+    name: "version is valid",
+    category: "manifest",
+    rules: [
+      "common.json rules"
+    ]
   }
 ]
