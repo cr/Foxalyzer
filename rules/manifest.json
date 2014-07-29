@@ -65,6 +65,7 @@
     category: "manifest",
     rules: [
       "common.json rules"
-    ]
+    ],
+    warning_message: "Your app's name is longer than 12 characters and may be truncated on Firefox OS devices. Consider using a shorter name for your app"
   }
 ]
