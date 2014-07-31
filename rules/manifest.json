@@ -123,5 +123,12 @@
       "privileged apps must be packaged"
     ],
     error_message: "unpackaged web apps may not have a type of `certified` or `privileged`"
+  },
+  {
+    name: "fullscreen is valid",
+    category: "manifest",
+    rules: [
+      "common.json rules"
+    ]
   }
 ]
