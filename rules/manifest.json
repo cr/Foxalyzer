@@ -94,11 +94,21 @@
     error_message: "Apps that are not privileged may not use the `role` field of the manifest"
   },
   {
-    name: "orientation",
+    name: "orientation is valid",
     category: "manifest",
     rules: [
       "common.json rules"
     ],
     error_message: "`orientation` must be any of the following: portrait,landscape,portrait-secondary,landscape-secondary,portrait-primary,landscape-primary"
+  },
+  {
+    name: "installs_allowed_from is valid",
+    category: "manifest",
+    rules: [
+      "common.json rules",
+      "valid if it contains urls in array",
+      "valid of it contains a wildcard in array",
+      "array items must be type string"
+    ]
   }
 ]
