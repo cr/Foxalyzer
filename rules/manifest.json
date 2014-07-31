@@ -146,5 +146,14 @@
     rules: [
       "common.json rules"
     ]
+  },
+  {
+    name: "appcache_path",
+    category: "manifest",
+    rules: [
+      "common.json rules",
+      "valid if app is packaged",
+      "valid if path is an absolute url"
+    ]
   }
 ]
