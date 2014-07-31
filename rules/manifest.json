@@ -113,5 +113,15 @@
       "if app is listed, marketplace url must be included in array",
       "marketplace urls must be https"
     ]
+  },
+  {
+    name: "type is valid",
+    category: "manifest",
+    rules: [
+      "common.json rules",
+      "invalid if 'certified' is also listed",
+      "privileged apps must be packaged"
+    ],
+    error_message: "unpackaged web apps may not have a type of `certified` or `privileged`"
   }
 ]
