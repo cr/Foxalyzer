@@ -130,5 +130,14 @@
     rules: [
       "common.json rules"
     ]
+  },
+  {
+    name: "redirects is valid",
+    category: "manifest",
+    rules: [
+      "common.josn rules",
+      "valid when app is privileged"
+    ],
+    error_message: "Apps that are not privileged may not use the `redirects` field of the manifest"
   }
 ]
