@@ -179,5 +179,14 @@
       "objects in array can only have a single property"
     ],
     error_message: "objects in array `messages` must each have only one property'"
+  },
+  {
+    name: "origin is valid",
+    category: "manifest",
+    rules: [
+      "common.json rules",
+      "invaild if app is not privileged",
+      "invalid if banned origins are included: gaiamobile.org,mozilla.com,mozilla.org"
+    ]
   }
 ]
