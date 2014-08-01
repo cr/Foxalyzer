@@ -155,5 +155,20 @@
       "valid if app is packaged",
       "valid if path is an absolute url"
     ]
+  },
+  {
+    name: "inputs",
+    category: "manifest",
+    rules: [
+      "common.json rules"
+    ]
+  },
+  {
+    name: "required_features",
+    category: "manifest",
+    rules: [
+      "common.json rules",
+      "valid if array is empty"
+    ]
   }
 ]
