@@ -148,7 +148,7 @@
     ]
   },
   {
-    name: "appcache_path",
+    name: "appcache_path is valid",
     category: "manifest",
     rules: [
       "common.json rules",
@@ -157,18 +157,27 @@
     ]
   },
   {
-    name: "inputs",
+    name: "inputs is valid",
     category: "manifest",
     rules: [
       "common.json rules"
     ]
   },
   {
-    name: "required_features",
+    name: "required_features is valid",
     category: "manifest",
     rules: [
       "common.json rules",
       "valid if array is empty"
     ]
+  },
+  {
+    name: "messages is valid",
+    category: "manifest",
+    rules: [
+      "common.json rules",
+      "objects in array can only have a single property"
+    ],
+    error_message: "objects in array `messages` must each have only one property'"
   }
 ]
