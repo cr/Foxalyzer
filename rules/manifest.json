@@ -56,17 +56,18 @@
     "name": "default_locale is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "must match one of the keys in `locales`"
     ],
+    "type": "string",
+    "minLength": 1,
     "error_message": "`default_locale` must match one of the keys in `locales`"
   },
   {
     "name": "name is valid",
     "category": "manifest",
-    "rules": [
-      "common.json rules"
-    ],
+    "type": "string",
+    "maxLength": 128,
+    "minLength": 1,
     "warning_message": "Your app's name is longer than 12 characters and may be truncated on Firefox OS devices. Consider using a shorter name for your app"
   },
   {
