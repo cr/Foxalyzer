@@ -31,9 +31,11 @@
     "name": "launch_path is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "packaged apps must have a launch_path"
     ],
+    "type": "string",
+    "pattern": "^(/[^/]+)*/?$",
+    "minLength": 1,
     "error_message": "`launch_path` is required when app is packaged"
   },
   {
