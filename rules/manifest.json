@@ -39,22 +39,18 @@
     "error_message": "`launch_path` is required when app is packaged"
   },
   {
-    "name": "icon property name",
+    "name": "icons are valid",
     "category": "manifest",
     "rules": [
       "paths must be absolute, relative URIs or data URIs",
-      "property name must be a natural number"
-    ],
-    "type": "object",
-    "error_message": "Icon size must be a natural number"
-  },
-  {
-    "name": "icon size requirement",
-    "category": "manifest",
-    "rules": [
+      "property name must be a natural number",
       "must require 128x128"
     ],
-    "error_message": "`icons` must include a 128x128 icon when app is listed"
+    "type": "object",
+    "error_message": [
+      "Icon size must be a natural number",
+      "`icons` must include a 128x128 icon when app is listed"
+    ]
   },
   {
     "name": "default_locale is valid",
