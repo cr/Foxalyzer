@@ -18,11 +18,13 @@
   {
     "name": "mandatory keys for all manifest files",
     "category": "manifest",
+    "required": ["description", "name"],
     "error_message": "`name`, `description` are mandatory fields"
   },
   {
     "name": "mandatory keys for marketplace-specific manifest files",
     "category": "manifest",
+    "required": ["developer"],
     "error_message": "`name`, `description`, `developer` are mandatory fields"
   },
   {
