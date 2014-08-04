@@ -100,9 +100,10 @@
     "name": "role is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "app must be privileged"
     ],
+    "type": "string",
+    "oneOf": ["system", "input", "homescreen"],
     "error_message": "Apps that are not privileged may not use the `role` field of the manifest"
   },
   {
