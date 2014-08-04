@@ -93,9 +93,8 @@
   {
     "name": "version is valid",
     "category": "manifest",
-    "rules": [
-      "common.json rules"
-    ]
+    "type": "string",
+    "minLength": 1
   },
   {
     "name": "role is valid",
