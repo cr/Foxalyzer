@@ -74,9 +74,20 @@
     "name": "developer is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "developer URL must be an absolute http or https URL"
     ],
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "url": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": ["name"],
     "error_message": "Developer URL must be an absolute HTTP or HTTPS URL"
   },
   {
