@@ -45,6 +45,7 @@
       "paths must be absolute, relative URIs or data URIs",
       "property name must be a natural number"
     ],
+    "type": "object",
     "error_message": "Icon size must be a natural number"
   },
   {
