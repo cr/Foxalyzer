@@ -130,10 +130,11 @@
     "name": "type is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "invalid if 'certified' is also listed",
       "privileged apps must be packaged"
     ],
+    "type": "string",
+    "oneOf": ["web", "privileged", "certified"],
     "error_message": "unpackaged web apps may not have a type of `certified` or `privileged`"
   },
   {
