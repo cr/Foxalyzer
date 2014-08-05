@@ -117,14 +117,14 @@
     "name": "installs_allowed_from is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "valid only if array is not empty",
       "valid if it contains absolute urls in array",
       "valid of it contains a wildcard in array",
       "array items must be type string",
       "if app is listed, marketplace url must be included in array",
       "marketplace urls must be https"
-    ]
+    ],
+    "type": "array"
   },
   {
     "name": "type is valid",
