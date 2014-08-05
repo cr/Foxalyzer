@@ -109,9 +109,8 @@
   {
     "name": "orientation is valid",
     "category": "manifest",
-    "rules": [
-      "common.json rules"
-    ],
+    "type": "string",
+    "anyOf": ["portrait", "landscape", "portrait-secondary", "landscape-secondary", "portrait-primary", "landscape-primary"],
     "error_message": "`orientation` must be any of the following: portrait,landscape,portrait-secondary,landscape-secondary,portrait-primary,landscape-primary"
   },
   {
