@@ -140,9 +140,8 @@
   {
     "name": "fullscreen is valid",
     "category": "manifest",
-    "rules": [
-      "common.json rules"
-    ]
+    "type": "string",
+    "oneOf": ["true", "false"]
   },
   {
     "name": "redirects is valid",
