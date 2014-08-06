@@ -163,9 +163,14 @@
   {
     "name": "chrome is valid",
     "category": "manifest",
-    "rules": [
-      "common.json rules"
-    ]
+    "type": "object",
+    "additionalProperties": false,
+    "minProperties": 1,
+    "properties": {
+      "navigation": {
+        "type": "boolean"
+      }
+    }
   },
   {
     "name": "appcache_path is valid",
