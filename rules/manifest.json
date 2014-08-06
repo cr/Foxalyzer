@@ -176,10 +176,11 @@
     "name": "appcache_path is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "valid if app is packaged",
       "valid if path is an absolute url"
-    ]
+    ],
+    "type": "string",
+    "minLength": 1
   },
   {
     "name": "inputs is valid",
