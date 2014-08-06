@@ -130,7 +130,7 @@
     "name": "type is valid",
     "category": "manifest",
     "rules": [
-      "invalid if 'certified' is also listed",
+      "invalid if 'certified' is also a listed app",
       "privileged apps must be packaged"
     ],
     "type": "string",
@@ -147,9 +147,17 @@
     "name": "redirects is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "valid when app is privileged"
     ],
+    "type": "array",
+    "items": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" }
+      }
+    },
     "error_message": "Apps that are not privileged may not use the `redirects` field of the manifest"
   },
   {
