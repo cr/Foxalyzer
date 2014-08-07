@@ -55,9 +55,7 @@
   {
     "name": "default_locale is valid",
     "category": "manifest",
-    "rules": [
-      "must match one of the keys in `locales`"
-    ],
+    "dependency": "locales",
     "type": "string",
     "minLength": 1,
     "error_message": "`default_locale` must match one of the keys in `locales`"
