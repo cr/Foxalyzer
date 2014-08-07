@@ -290,9 +290,12 @@
     "name": "precompile",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "invalid if non-packaged app uses this property"
     ],
+    "type": "array",
+    "items": {
+      "type": "string"
+    },
     "error_message": "Apps that are not packaged may not use the `precompile` field of the manifest"
-  },\
+  },
 ]
