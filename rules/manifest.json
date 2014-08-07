@@ -187,51 +187,47 @@
     "category": "manifest",
     "type": "object",
     "additionalProperties": {
-        "type": "object",
-        "required": ["launch_path", "name", "description", "types"],
-        "properties": {
-            "launch_path": {
-                "type": "string",
-                "minLength": 1
-            },
-            "name": {
-                "type": "string",
-                "maxLength": 128,
-                "minLength": 1
-            },
-            "description": {
-                "type": "string",
-                "minLength": 1
-            },
-            "types": {
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                    "type": "string",
-                    "oneOf": [
-                        "text", "url", "email", "password",
-                        "number", "option"
-                    ]
-                }
-            },
-            "locales": {
-                "type": "object",
-                "additionalProperties": {
-                    "additionalProperties": false,
-                    "properties": {
-                        "name": { "type": "string" },
-                        "description": { "type": "string" }
-                    }
-                }
+      "type": "object",
+      "required": ["launch_path", "name", "description", "types"],
+      "properties": {
+        "launch_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 128,
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "types": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "oneOf": ["text", "url", "email", "password", "number", "option"]
+          }
+        },
+        "locales": {
+          "type": "object",
+          "additionalProperties": {
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" }
             }
+          }
         }
+      }
     }
   },
   {
     "name": "required_features is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "valid if array is empty"
     ]
   },
