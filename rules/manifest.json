@@ -302,5 +302,12 @@
     "name": "locales",
     "category": "manifest",
     "type": "object"
+  },
+  {
+    "name": "description",
+    "category": "manifest",
+    "type": "string",
+    "maxLength": 1024,
+    "minLength": 1
   }
 ]
