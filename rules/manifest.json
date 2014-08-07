@@ -247,10 +247,11 @@
     "name": "origin is valid",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "invaild if app is not privileged",
       "invalid if banned origins are included: gaiamobile.org,mozilla.com,mozilla.org"
-    ]
+    ],
+    "type": "string",
+    "pattern": "(^app://[a-z0-9]+([-.]{1}[a-z0-9]+)*)|(.[a-z]{2,5}$)"
   },
   {
     "name": "activities",
