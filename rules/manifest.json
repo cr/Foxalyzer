@@ -280,11 +280,11 @@
     "name": "permissions",
     "category": "manifest",
     "rules": [
-      "common.json rules",
       "permissions should only be allowed based on provided type (web, privileged, certified)",
       "each permission requires a description property",
       "permission access for contacts, device-storange:*, settings must match any of readonly, readwrite, readcreate, createonly"
-    ]
+    ],
+    "type": "object"
   },
   {
     "name": "precompile",
@@ -294,5 +294,5 @@
       "invalid if non-packaged app uses this property"
     ],
     "error_message": "Apps that are not packaged may not use the `precompile` field of the manifest"
-  }
+  },\
 ]
