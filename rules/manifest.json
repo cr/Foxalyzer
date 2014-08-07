@@ -298,4 +298,9 @@
     },
     "error_message": "Apps that are not packaged may not use the `precompile` field of the manifest"
   },
+  {
+    "name": "locales",
+    "category": "manifest",
+    "type": "object"
+  }
 ]
