@@ -256,9 +256,25 @@
   {
     "name": "activities",
     "category": "manifest",
-    "rules": [
-      "common.json rules"
-    ]
+    "type": "object",
+    "minProperties": 1,
+    "additionalProperties": {
+      "type": "object",
+      "required": ["href"],
+      "additionalProperties": false,
+      "properties": {
+        "href": { "type": "string" },
+        "returnValue": { "type": "boolean" },
+        "disposition": {
+          "type": "string",
+          "oneOf": ["window", "inline"]
+        },
+        "filters": {
+          "type": "object",
+          "minProperties": 1
+        }
+      }
+    }
   },
   {
     "name": "permissions",
