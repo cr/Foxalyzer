@@ -309,5 +309,11 @@
     "type": "string",
     "maxLength": 1024,
     "minLength": 1
+  },
+  {
+    "name": "csp",
+    "category": "manifest",
+    "type": "string",
+    "minLength": 1
   }
 ]
