@@ -1,12 +1,15 @@
 (function (mod) {
-    if (typeof exports == "object" && typeof module == "object") return mod(exports); // CommonJS
-    if (typeof define == "function" && define.amd) return define(["exports"], mod); // AMD
-    mod(this.Zip || (this.Zip = {})); // Plain browser env
+    if (typeof exports == "object" && typeof module == "object") return mod(exports); // CommonJS (node et al.)
+    if (typeof define == "function" && define.amd) return define(["exports"], mod); // AMD (require.js et al.)
 }) (function (exports) {
 
-    function unpack(foo) {
-        return foo;
+    var fs = require('fs');
+    var zip = require('../lib/jszip.min.js');
+
+    function get(ref) {
+        var zip = new JSZip();
+
     }
 
-    exports.unpack = unpack;
+    exports.get = get;
 });

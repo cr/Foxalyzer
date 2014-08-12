@@ -1,27 +1,17 @@
-"use strict";
+(function (mod) {
+    if (typeof exports == "object" && typeof module == "object") return mod(exports); // CommonJS (node et al.)
+    if (typeof define == "function" && define.amd) return define(["exports"], mod); // AMD (require.js et al.)
+}) (function (exports) {
 
-(Foxalyzer.parser.register( "app_icons", "0.0.1",
+    var manifest = require('./manifest.js');
+    var image_features = require('./image_features.js');
 
-    function( file_collection ) {
-        var icon_features = [
-            {
-                "fileref": "/img/foo.png",
-                "mimetype": "image/png",
-                "x_size": "128",
-                "y_size": "128",
-                "dpi": "90",
-                "color_depth": "24"
-            },
-            {
-                "fileref": "/img/bar.png",
-                "mimetype": "image/png",
-                "x_size": "128",
-                "y_size": "164",
-                "dpi": "90",
-                "color_depth": "24"
-            }
-        ];
-        return [];
+    function parse( file_collection ) {
+        icons = manifest(file_collection);
+        // extract all icons referenced in manifest
+        return this.icon_features(icons);
     }
 
-))
+    exports.parse = parse;
+
+});
