@@ -97,9 +97,7 @@
   {
     "name": "role is valid",
     "category": "manifest",
-    "rules": [
-      "app must be privileged"
-    ],
+    "appType": ["privileged"],
     "type": "string",
     "oneOf": ["system", "input", "homescreen"],
     "error_message": "Apps that are not privileged may not use the `role` field of the manifest"
@@ -114,8 +112,8 @@
   {
     "name": "installs_allowed_from is valid",
     "category": "manifest",
+    "emptyArray": false,
     "rules": [
-      "valid only if array is not empty",
       "valid if it contains absolute urls in array",
       "valid of it contains a wildcard in array",
       "array items must be type string",
@@ -144,9 +142,7 @@
   {
     "name": "redirects is valid",
     "category": "manifest",
-    "rules": [
-      "valid when app is privileged"
-    ],
+    "appType": ["privileged"],
     "type": "array",
     "items": {
       "type": "object",
@@ -173,8 +169,8 @@
   {
     "name": "appcache_path is valid",
     "category": "manifest",
+    "appType": ["packaged"],
     "rules": [
-      "valid if app is packaged",
       "valid if path is an absolute url"
     ],
     "type": "string",
@@ -225,9 +221,7 @@
   {
     "name": "required_features is valid",
     "category": "manifest",
-    "rules": [
-      "valid if array is empty"
-    ]
+    "emptyArray": true
   },
   {
     "name": "messages is valid",
@@ -244,10 +238,8 @@
   {
     "name": "origin is valid",
     "category": "manifest",
-    "rules": [
-      "invaild if app is not privileged",
-      "invalid if banned origins are included: gaiamobile.org,mozilla.com,mozilla.org"
-    ],
+    "appType": ["privileged"],
+    "bannedOrigins": ["gaiamobile.org", "mozilla.com", "mozilla.org"],
     "type": "string",
     "pattern": "(^app://[a-z0-9]+([-.]{1}[a-z0-9]+)*)|(.[a-z]{2,5}$)"
   },
@@ -287,9 +279,7 @@
   {
     "name": "precompile",
     "category": "manifest",
-    "rules": [
-      "invalid if non-packaged app uses this property"
-    ],
+    "appType": ["packaged"],
     "type": "array",
     "items": {
       "type": "string"
