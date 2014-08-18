@@ -58,7 +58,7 @@
     "dependency": "locales",
     "type": "string",
     "minLength": 1,
-    "error_message": "`default_locale` must match one of the keys in `locales`"
+    "error_message": "`default_locale` is required if `locales` exists"
   },
   {
     "name": "name is valid",
@@ -170,9 +170,7 @@
     "name": "appcache_path is valid",
     "category": "manifest",
     "appType": ["packaged"],
-    "rules": [
-      "valid if path is an absolute url"
-    ],
+    "URLType": ["absolute"],
     "type": "string",
     "minLength": 1
   },
