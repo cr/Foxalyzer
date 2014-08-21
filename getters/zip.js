@@ -3,12 +3,34 @@
     if (typeof define == "function" && define.amd) return define(["exports"], mod); // AMD (require.js et al.)
 }) (function (exports) {
 
-    var fs = require('fs');
-    var zip = require('../lib/jszip.min.js');
+    var JSzip = require('../lib/jszip.min.js');
 
-    function get(ref) {
-        var zip = new JSZip();
+    function get(args) {
 
+        // FIXME: major memory consumption through object conversions
+        var zip_data;
+
+        // check whether we're given a filename or raw data to unpack
+        if (typeof args.filename == 'string') {  // file name
+            console.log('reading from ' + args.filename);
+            var fs = require('fs'); // FIXME: assuming node
+            fs.stat(args.filename, function (err, stats) {
+                if (err) throw err;
+                //console.log('stats: ' + JSON.stringify(stats));
+            });
+            zip_data = new Uint8Array(fs.readFileSync(args.filename));
+
+        } else if (typeof args.data == 'object') { // raw data buffer
+            zip_data = new Uint8Array(args.data);
+
+        } else { // FIXME: add reading from URI
+            throw 'zip.js: get(): unsupported argument type';
+        }
+
+        console.log('got ' + zip_data.byteLength + ' bytes');
+
+        // FIXME: zip format error handling
+        return new JSzip(zip_data);
     }
 
     exports.get = get;

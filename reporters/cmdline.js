@@ -6,14 +6,30 @@
     var getters = {};
     getters.zip = require('../getters/zip.js');
 
-    function init(parent) {
-        return parent;
+    var parsers = {};
+    parsers.manifest = require('../parsers/manifest.js');
+
+    var matchers = {};
+    matchers.manifest_validator = require('../matchers/manifest_validator.js');
+
+    var ruleset = require('../rules/rules.json');
+
+    console.log("DEBUG: " + JSON.stringify(ruleset));
+
+    function report(zipfile) {
+        var textreport = "";
+        var fileset = getters.zip.get({filename:zipfile});
+        var propset = parsers.manifest.parse(fileset);
+        var reportitems = matchers.manifest_validator.match(propset, ruleset);
+        if (reportitems && reportitems.length>0) {
+            for (var item in reportitems) {
+                textreport += zipfile + "/" + item.file_ref.name + ": " + item.message + "\n";
+            }
+        } else {
+            textreport += zipfile + ": no errors detected\n";
+        }
+        return textreport;
     }
 
-    function report(foo) {
-        return [ { 'message': foo + ", line 1: foobar test error" } ];
-    }
-
-    exports.init = init;
     exports.report = report;
 });

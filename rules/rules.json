@@ -1,0 +1,15 @@
+[
+    {
+        "category": "app validation",
+        "target": "fxos>=1.0",
+        "name": "valid JSON",
+        "description": "The app manifest must parse as a valid JSON file",
+        "info": "http://www.wikipedia.org",
+        "matcher": "manifest_validator",
+        "rating": "critical",
+        "specs": {
+            "handler": "file_is_valid_json",
+            "files": ["manifest.webapp"]
+        }
+    }
+]

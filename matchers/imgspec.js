@@ -3,7 +3,7 @@
     if (typeof define == "function" && define.amd) return define(["exports"], mod); // AMD (require.js et al.)
 }) (function (exports) {
 
-    function match( file_collection ) {
+    function match( file_collection, ruleset ) {
         return [
             {
                 'error_message': file_collection[0].fileref + ": something wrong there"
