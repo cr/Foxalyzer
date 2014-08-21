@@ -34,7 +34,7 @@
 
     var handlers = {
         "__handler__file_is_valid_json": function (ps, rule) {
-            console.log( JSON.stringify(ps) );
+            //console.log( JSON.stringify(ps) );
             msg = [];
             for (var i = 0; i < rule.specs.files.length; i++) {
                 f = rule.specs.files[i];
