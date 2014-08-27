@@ -12,7 +12,7 @@
 
         // check whether we're given a filename or raw data to unpack
         if (typeof args.filename == 'string') {  // file name
-            console.log('reading from ' + args.filename);
+            console.error('reading from ' + args.filename);
             var fs = require('fs'); // FIXME: assuming node
             fs.stat(args.filename, function (err, stats) {
                 if (err) throw err;
@@ -27,7 +27,7 @@
             throw 'zip.js: get(): unsupported argument type';
         }
 
-        console.log('got ' + zip_data.byteLength + ' bytes');
+        console.error('got ' + zip_data.byteLength + ' bytes');
 
         // FIXME: zip format error handling
         return new JSzip(zip_data);

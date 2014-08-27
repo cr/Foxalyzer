@@ -7,6 +7,8 @@
         "info": "http://www.wikipedia.org",
         "matcher": "manifest_validator",
         "rating": "critical",
+        "priority": 90,
+        "terminal": true,
         "specs": {
             "handler": "file_is_valid_json",
             "files": ["manifest.webapp"]

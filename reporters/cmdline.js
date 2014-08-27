@@ -9,21 +9,24 @@
     var parsers = {};
     parsers.manifest = require('../parsers/manifest.js');
 
-    var matchers = {};
-    matchers.manifest_validator = require('../matchers/manifest_validator.js');
-
-    var ruleset = require('../rules/rules.json');
-
-    console.log("DEBUG: " + JSON.stringify(ruleset));
-
     function report(zipfile) {
         var textreport = "";
         var fileset = getters.zip.get({filename:zipfile});
         var propset = parsers.manifest.parse(fileset);
-        var reportitems = matchers.manifest_validator.match(propset, ruleset);
-        if (reportitems && reportitems.length>0) {
-            for (var item in reportitems) {
-                textreport += zipfile + "/" + item.file_ref.name + ": " + item.message + "\n";
+
+        var RuleSet = require('../rules/ruleset.js');
+        var ruleset = new RuleSet.RuleSet();
+        ruleset.add({filename:'../rules/rules.json'});
+
+        var reportitems = ruleset.resolve(propset);
+
+        if (reportitems.length>0) {
+            for (var i=0 ; i<reportitems.length ; i++) {
+                var item = reportitems[i];
+                var file_name;
+                try { file_name = item.file_ref.name } catch (e) { file_name = '' };
+                textreport += zipfile + '/' + file_name + '\t'+';'+';'+'\t' + item.message + "\n";
+                //TODO: also add offset,line number,snippet info
             }
         } else {
             textreport += zipfile + ": no errors detected\n";

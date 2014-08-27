@@ -3,18 +3,24 @@
 function FileProperties() {
     this.file_ref = {};     // reference to jszip file object
     this.prop1 = "foobar";  // parser-specific properties...
-    this.prop2 = {whatever:"is important"};
+    this.prop2 = {whatever: "is important"};
 }
 
 function Rule() {
-    this.category = "";     // rule category
-    this.target = "";       // something to determine applicability to use case (eg. os+version)
-    this.name = "";         // rule name, short and sweet
+    this.name = "";         // unique rule name, short and sweet
     this.description = "";  // verbose rule description
     this.info = "http://";  // link to more information
-    this.matcher = "";      // scanner and its version
+    this.category = "";     // rule category
+    this.target = "";       // something to determine applicability to use case (eg. os+version)
+    this.priority = 50;     // rules will run sorted by priority in [0,100]
+    this.depends = [
+        [],
+        []
+    ]; //
+    this.matcher = "";      // intended matcher and its version
     this.rating = "";       // severity rating
-    this.specs = {};         // matcher-specific rule definition
+    this.specs = {};        // matcher-specific rule definition
+    this.messages = [];
 }
 
 function ReportItem() {

@@ -6,7 +6,7 @@
     function parse( jszip ) {
         var property_set = {};
 
-        //console.log("DEBUG: got jszip " + JSON.stringify(jszip) );
+        //console.error("manifest.parse(): got jszip " + JSON.stringify(jszip) );
 
         // does the zip contain a manifest?
         if (!jszip.files['manifest.webapp']) {
