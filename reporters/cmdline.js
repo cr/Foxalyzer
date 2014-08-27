@@ -29,7 +29,7 @@
                 //TODO: also add offset,line number,snippet info
             }
         } else {
-            textreport += zipfile + ": no errors detected\n";
+            textreport += zipfile + "\tOK\n";
         }
         return textreport;
     }
