@@ -10,9 +10,12 @@ if (!zip_file_name) {
 
 var reporter = require('./reporters/cmdline.js');
 var report = reporter.report(zip_file_name);
-if (report !== "") {
-    console.log('%s: OK', zip_file_name);
+// chomp trailing newline
+if (report[report.length-1] === "\n") report = report.substr(0, report.length-1);
+console.log('%s', report);
+
+if (report.substr(report.length-3, report.length-1) === '\tOK') {
+    process.exit(0);
 } else {
-    console.log('REPORT OUTPUT:');
-    console.log('%s', report);
+    process.exit(20);
 }
